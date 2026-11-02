@@ -1,5 +1,5 @@
 version = 1
-revision = 3
+revision = 5
 requires-python = ">=3.10.0, <4.0"
 resolution-markers = [
     "python_full_version >= '3.15'",
@@ -323,18 +323,22 @@ wheels = [
 
 [[package]]
 name = "azure-ai-agentserver-core"
-version = "2.0.0b7"
+version = "2.3.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
+    { name = "aiohttp" },
+    { name = "azure-core" },
+    { name = "azure-identity" },
     { name = "hypercorn" },
+    { name = "isodate" },
     { name = "microsoft-opentelemetry" },
     { name = "opentelemetry-api" },
     { name = "opentelemetry-sdk" },
     { name = "starlette" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/9a/6c/5e3a796274e70e899eac739bc4e81e7645de6e5146fb18b1a5b3d79297e5/azure_ai_agentserver_core-2.0.0b7.tar.gz", hash = "sha256:272265f7ab6dcda3cb518a5028394b6684992e0abde9cfc2dfc2e851a289eab7", size = 52702, upload-time = "2026-06-28T14:29:52.329Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/8e/16/ad04c9b9181bdc0f8a2d1f647b2f8cd34d16b928654affc0204794fcaa19/azure_ai_agentserver_core-2.3.0.tar.gz", hash = "sha256:929daed75087729f892969390f6fd4beff5e71ff6fdaaf832194da66fee460a3", size = 435842, upload-time = "2026-10-30T05:27:05.517Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/73/be/63747c3b1c6c7a41672568f34a41a7d54005201a7db552d928d64ea4f367/azure_ai_agentserver_core-2.0.0b7-py3-none-any.whl", hash = "sha256:9177be59054eb6644018ef8c82afa7de22379f65a2d9bf7382ba6bc4cd50f2ef", size = 35182, upload-time = "2026-06-28T14:29:53.348Z" },
+    { url = "https://files.pythonhosted.org/packages/96/4c/754aa4e564f03565bddcab17e9c9ef6d20cd21d829a78a2434efeec81bf9/azure_ai_agentserver_core-2.3.0-py3-none-any.whl", hash = "sha256:ecdedb62fc7048396ebb7b90502affbe55829799bc52b867c3dbb5f17bdfba6f", size = 225886, upload-time = "2026-10-30T05:27:07.339Z" },
 ]
 
 [[package]]
@@ -351,7 +355,7 @@ wheels = [
 
 [[package]]
 name = "azure-ai-agentserver-responses"
-version = "1.0.0b8"
+version = "2.4.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "aiohttp" },
@@ -359,9 +363,9 @@ dependencies = [
     { name = "azure-core" },
     { name = "isodate" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/31/1f/7e7563705100f2d21c952a44d5a2e93a8193cc0a6013941bac9f52ad8874/azure_ai_agentserver_responses-1.0.0b8.tar.gz", hash = "sha256:bc0365fd70b7dabf9c9394dac5bbab08f772b59f865319d401cfde317b6832ef", size = 450099, upload-time = "2026-06-28T14:52:32.155Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/b1/1d/d116f1f62fa06422d131a18125b916b82e3ce6eb9ac72c501bed91e33ff8/azure_ai_agentserver_responses-2.4.0.tar.gz", hash = "sha256:4ad178283a6c2247b96d31ffbc61d87c9cce4ed1c69f85fa532c8e175fd78613", size = 884469, upload-time = "2026-10-30T07:01:02.994Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/d3/0d/bb14df13b7d3d57decc72c0908677e229efcb24cad2ccce0c16fa736edce/azure_ai_agentserver_responses-1.0.0b8-py3-none-any.whl", hash = "sha256:4243de685ffb3c3a3c11c4f07e0156b20ea7f37aecfe6e8eec53f776734b3808", size = 269273, upload-time = "2026-06-28T14:52:33.533Z" },
+    { url = "https://files.pythonhosted.org/packages/37/b3/f77e3877c6ac20b354f9b3acb29ae0b9fa74aac11c5fdc6cc1f7f84e60c7/azure_ai_agentserver_responses-2.4.0-py3-none-any.whl", hash = "sha256:7a56c6e58c01295ed869e99cb8008bc36fc1740f91772d2f4802b6bce56ea2da", size = 445878, upload-time = "2026-10-30T07:01:04.955Z" },
 ]
 
 [[package]]
@@ -987,7 +991,7 @@ name = "exceptiongroup"
 version = "1.3.1"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "typing-extensions", marker = "python_full_version < '3.11'" },
+    { name = "typing-extensions" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/50/79/66800aadf48771f6b62f7eb014e352e5d06856655206165d775e675a02c9/exceptiongroup-1.3.1.tar.gz", hash = "sha256:8b412432c6055b0b7d14c310000ae93352ed6754f70fa8f7c34141f91c4e3219", size = 30371, upload-time = "2025-11-21T23:01:54.787Z" }
 wheels = [
@@ -1283,17 +1287,17 @@ resolution-markers = [
     "python_full_version < '3.11'",
 ]
 dependencies = [
-    { name = "colorama", marker = "python_full_version < '3.11' and sys_platform == 'win32'" },
-    { name = "decorator", marker = "python_full_version < '3.11'" },
-    { name = "exceptiongroup", marker = "python_full_version < '3.11'" },
-    { name = "jedi", marker = "python_full_version < '3.11'" },
-    { name = "matplotlib-inline", marker = "python_full_version < '3.11'" },
-    { name = "pexpect", marker = "python_full_version < '3.11' and sys_platform != 'emscripten' and sys_platform != 'win32'" },
-    { name = "prompt-toolkit", marker = "python_full_version < '3.11'" },
-    { name = "pygments", marker = "python_full_version < '3.11'" },
-    { name = "stack-data", marker = "python_full_version < '3.11'" },
-    { name = "traitlets", marker = "python_full_version < '3.11'" },
-    { name = "typing-extensions", marker = "python_full_version < '3.11'" },
+    { name = "colorama", marker = "sys_platform == 'win32'" },
+    { name = "decorator" },
+    { name = "exceptiongroup" },
+    { name = "jedi" },
+    { name = "matplotlib-inline" },
+    { name = "pexpect", marker = "sys_platform != 'emscripten' and sys_platform != 'win32'" },
+    { name = "prompt-toolkit" },
+    { name = "pygments" },
+    { name = "stack-data" },
+    { name = "traitlets" },
+    { name = "typing-extensions" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/40/18/f8598d287006885e7136451fdea0755af4ebcbfe342836f24deefaed1164/ipython-8.39.0.tar.gz", hash = "sha256:4110ae96012c379b8b6db898a07e186c40a2a1ef5d57a7fa83166047d9da7624", size = 5513971, upload-time = "2026-03-27T10:02:13.94Z" }
 wheels = [
@@ -1311,18 +1315,18 @@ resolution-markers = [
     "python_full_version == '3.11.*'",
 ]
 dependencies = [
-    { name = "colorama", marker = "python_full_version >= '3.11' and sys_platform == 'win32'" },
-    { name = "decorator", marker = "python_full_version >= '3.11'" },
-    { name = "ipython-pygments-lexers", marker = "python_full_version >= '3.11'" },
-    { name = "jedi", marker = "python_full_version >= '3.11'" },
-    { name = "matplotlib-inline", marker = "python_full_version >= '3.11'" },
-    { name = "pexpect", marker = "python_full_version >= '3.11' and sys_platform != 'emscripten' and sys_platform != 'win32'" },
-    { name = "prompt-toolkit", marker = "python_full_version >= '3.11'" },
-    { name = "psutil", marker = "python_full_version >= '3.11' and sys_platform != 'cygwin' and sys_platform != 'emscripten'" },
-    { name = "pygments", marker = "python_full_version >= '3.11'" },
-    { name = "stack-data", marker = "python_full_version >= '3.11'" },
-    { name = "traitlets", marker = "python_full_version >= '3.11'" },
-    { name = "typing-extensions", marker = "python_full_version == '3.11.*'" },
+    { name = "colorama", marker = "sys_platform == 'win32'" },
+    { name = "decorator" },
+    { name = "ipython-pygments-lexers" },
+    { name = "jedi" },
+    { name = "matplotlib-inline" },
+    { name = "pexpect", marker = "sys_platform != 'emscripten' and sys_platform != 'win32'" },
+    { name = "prompt-toolkit" },
+    { name = "psutil", marker = "sys_platform != 'cygwin' and sys_platform != 'emscripten'" },
+    { name = "pygments" },
+    { name = "stack-data" },
+    { name = "traitlets" },
+    { name = "typing-extensions", marker = "python_full_version < '3.12'" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/53/59/165d3b4d75cc34add3122c4417ecb229085140ac573103c223cd01dde96f/ipython-9.15.0.tar.gz", hash = "sha256:da2819ce2aa83135257df830660b1176d986c3d2876db24df01974fa955b2756", size = 4442580, upload-time = "2026-06-26T11:03:35.913Z" }
 wheels = [
@@ -1334,7 +1338,7 @@ name = "ipython-pygments-lexers"
 version = "1.1.1"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "pygments", marker = "python_full_version >= '3.11'" },
+    { name = "pygments" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/ef/4c/5dd1d8af08107f88c7f741ead7a40854b8ac24ddf9ae850afbcf698aa552/ipython_pygments_lexers-1.1.1.tar.gz", hash = "sha256:09c0138009e56b6854f9535736f4171d855c8c08a563a0dcd8022f78355c7e81", size = 8393, upload-time = "2025-01-17T11:24:34.505Z" }
 wheels = [
@@ -1548,6 +1552,7 @@ wheels = [
 name = "langchain-azure-ai"
 version = "1.2.8"
 source = { editable = "." }
+default-groups = ["typing"]
 dependencies = [
     { name = "aiohttp" },
     { name = "azure-ai-contentsafety" },
@@ -1649,7 +1654,7 @@ requires-dist = [
     { name = "azure-ai-agents", marker = "extra == 'v1'", specifier = "==1.2.0b6" },
     { name = "azure-ai-agentserver-core", marker = "extra == 'hosting'", specifier = ">=2.0.0b7,<3.0" },
     { name = "azure-ai-agentserver-invocations", marker = "extra == 'hosting'", specifier = ">=1.0.0b6,<2.0" },
-    { name = "azure-ai-agentserver-responses", marker = "extra == 'hosting'", specifier = ">=1.0.0b8,<2.0" },
+    { name = "azure-ai-agentserver-responses", marker = "extra == 'hosting'", specifier = ">=1.0.0b8,<3.0" },
     { name = "azure-ai-contentsafety", specifier = ">=1.0.0,<2.0.0" },
     { name = "azure-ai-contentunderstanding", specifier = ">=1.2.0b2,<2.0.0" },
     { name = "azure-ai-documentintelligence", marker = "extra == 'tools'", specifier = ">=1.0.2,<2.0.0" },
@@ -1712,7 +1717,7 @@ test = [
     { name = "pytest-socket", specifier = ">=0.6,<0.9" },
     { name = "pytest-watcher", specifier = ">=0.3.4,<0.7.0" },
     { name = "python-dotenv", specifier = "~=1.0" },
-    { name = "syrupy", specifier = ">=5.0,<6" },
+    { name = "syrupy", specifier = ">=5.0,<7" },
     { name = "vcrpy", specifier = ">=8.2.1" },
     { name = "wrapt", specifier = ">=1.14.0" },
 ]
@@ -4050,14 +4055,14 @@ wheels = [
 
 [[package]]
 name = "syrupy"
-version = "5.4.0"
+version = "6.1.1"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "pytest" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/10/35/0052946e6318109af9eecaa35e1a18c49ee8765702eb1e2177071fe779b4/syrupy-5.4.0.tar.gz", hash = "sha256:cc166e6331c735b7acc93074f9b171dd1b130444e944b185aa5123767b49b76f", size = 87881, upload-time = "2026-07-01T15:30:11.756Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/74/2c/8ffc1414d1951895d0d5b7dc83c0b079ebc48c3bf27ffbb0064646367500/syrupy-6.1.1.tar.gz", hash = "sha256:7e584a8df4ede6dd3c1c44a77f9edc46186b6767a73dea6f0083044946839a59", size = 109705, upload-time = "2026-09-13T20:25:21.599Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/69/80/0c7095f357afeb52100d312250354d2e76afb779c81fe3fb52118076fa5a/syrupy-5.4.0-py3-none-any.whl", hash = "sha256:3079017f0c6d3c1b293b57ad2af15cc7851d8eceba922896bdb3bc4834df4ce8", size = 53364, upload-time = "2026-07-01T15:30:10.332Z" },
+    { url = "https://files.pythonhosted.org/packages/2c/b5/bf2a8a335a6a813869dd482cedbcde252f582b5afbfe50eb78ec09962800/syrupy-6.1.1-py3-none-any.whl", hash = "sha256:6ac9ac6a42d70ae44156f5f157a9563b9bb8cc96dcf9364327f330463bff889a", size = 63436, upload-time = "2026-09-13T20:25:20.294Z" },
 ]
 
 [[package]]
@@ -4065,8 +4070,8 @@ name = "taskgroup"
 version = "0.2.2"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "exceptiongroup", marker = "python_full_version < '3.11'" },
-    { name = "typing-extensions", marker = "python_full_version < '3.11'" },
+    { name = "exceptiongroup" },
+    { name = "typing-extensions" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/f0/8d/e218e0160cc1b692e6e0e5ba34e8865dbb171efeb5fc9a704544b3020605/taskgroup-0.2.2.tar.gz", hash = "sha256:078483ac3e78f2e3f973e2edbf6941374fbea81b9c5d0a96f51d297717f4752d", size = 11504, upload-time = "2025-01-03T09:24:13.761Z" }
 wheels = [
@@ -4379,15 +4384,15 @@ wheels = [
 
 [[package]]
 name = "vcrpy"
-version = "8.3.0"
+version = "8.5.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "pyyaml" },
     { name = "wrapt" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/39/d5/8a1f8eb603e2d35fbb0ecd1e309d0c5c18a0ecfc8c0a8f04088bbc8f833b/vcrpy-8.3.0.tar.gz", hash = "sha256:46d64e77e8d95e5c76c7d9a94ff05d8b38b2ae4e1d4869eb0235024b6fcb5212", size = 96117, upload-time = "2026-07-04T14:27:01.608Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/82/ec/69ad8ab945540ab11b507fd8ccdbfc9f30e1b4b71f8f42e670f84fb0492a/vcrpy-8.5.0.tar.gz", hash = "sha256:93b65a1512d92c3985a3b731c5a9a4bc1447103d76b896c7d031b3b105e312b9", size = 103228, upload-time = "2026-10-25T20:07:06.705Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/34/77/cb4219be91508399cbcb6143bad89462cfb16f6c638458f454a5d46ac95a/vcrpy-8.3.0-py3-none-any.whl", hash = "sha256:bd66e6143746778157f00e2a922527a8d96b2fdc350be8988a45a29c843815b9", size = 46530, upload-time = "2026-07-04T14:27:00.546Z" },
+    { url = "https://files.pythonhosted.org/packages/66/cb/e4a5f56261ec2a86f1c26f61d5919486a6eafb583694a1639df9a373bfc7/vcrpy-8.5.0-py3-none-any.whl", hash = "sha256:cebe4bf4f30f89a8f27525e7b7eca6eeb3231fa8427bbd117540f645dbadf951", size = 48999, upload-time = "2026-10-25T20:07:04.919Z" },
 ]
 
 [[package]]
